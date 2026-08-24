@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JARVI3 DTL Evidence Board</title>
+  <style>
+    :root { color-scheme: light; --ink: #17212b; --muted: #5b6875; --line: #d8e0e7; --accent: #0b6e69; --soft: #eef7f5; }
+    body { margin: 0; font: 16px/1.55 system-ui, sans-serif; color: var(--ink); background: #f7f9fb; }
+    main { max-width: 1080px; margin: 0 auto; padding: 48px 24px 64px; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; }
+    .lede { max-width: 760px; color: var(--muted); font-size: 1.1rem; }
+    .notice { border-left: 4px solid var(--accent); background: var(--soft); padding: 14px 18px; margin: 28px 0; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
+    th, td { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+    tr:last-child td { border-bottom: 0; }
+    .status { display: inline-block; padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; font-size: .85rem; white-space: nowrap; }
+    a { color: var(--accent); }
+    .metric { font-weight: 700; white-space: nowrap; }
+    footer { color: var(--muted); margin-top: 28px; font-size: .9rem; }
+    @media (max-width: 760px) { main { padding: 32px 14px 48px; } table, thead, tbody, tr, th, td { display: block; } thead { display: none; } td { border-bottom: 0; padding: 8px 14px; } tr { border-bottom: 1px solid var(--line); padding: 12px 0; } td:first-child { padding-top: 16px; } td:last-child { padding-bottom: 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>JARVI3 DTL Evidence Board</h1>
+    <p class="lede">A public record of deterministic taxonomy lane results. DTL promotes certificate-backed answers, abstains when evidence is insufficient, and keeps benchmark eligibility separate from development evidence.</p>
+    <div class="notice"><strong>Claim boundary:</strong> this is not the official ProgramBench or MathArena leaderboard. The ProgramBench entry is awaiting registry review.</div>
+    <table>
+      <thead><tr><th>Entry</th><th>Track</th><th>Result</th><th>Status</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Jarvi3: Themis-G</strong><br>ProgramBench cleanroom</td>
+          <td>Official benchmark submission</td>
+          <td class="metric">2/200 resolved<br>1,037/1,037 tests passed</td>
+          <td><span class="status">Registry PR pending</span></td>
+          <td><a href="https://github.com/kyal102/jarvi3-themis-g-programbench-2solve">Package</a><br><a href="https://github.com/ProgramBench/submissions/pull/27">Official PR #27</a></td>
+        </tr>
+        <tr>
+          <td><strong>DTL/SuperMath</strong><br>AIME-style public seed</td>
+          <td>Verifier-first exact-answer lane</td>
+          <td class="metric">14 correct<br>0 incorrect<br>16 abstain<br>100% precision on answered</td>
+          <td><span class="status">Public-seed evidence</span></td>
+          <td><a href="evidence/aime-2026-supermath-dtl-full30.md">Full report</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>Machine-readable source: <a href="leaderboard.json">leaderboard.json</a>. Methodology: <a href="METHODOLOGY.md">METHODOLOGY.md</a>.</footer>
+  </main>
+</body>
+</html>
