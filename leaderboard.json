@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "board": "JARVI3 DTL Evidence Board",
+  "claim_boundary": "Public evidence board; not an official ProgramBench or MathArena leaderboard.",
+  "updated": "2026-08-24",
+  "entries": [
+    {
+      "id": "jarvi3-themis-g-programbench-cleanroom-v2",
+      "system": "Jarvi3: Themis-G",
+      "track": "official_programbench_submission",
+      "status": "pending_registry",
+      "resolved_instances": 2,
+      "benchmark_denominator": 200,
+      "recorded_tests": 1037,
+      "passed_tests": 1037,
+      "failed_tests": 0,
+      "archive_integrity": "2 clean, 0 contaminated",
+      "source_repository": "https://github.com/kyal102/jarvi3-themis-g-programbench-2solve",
+      "source_commit": "c1240b5175426d9d401a63d3b5a56224ed44d409",
+      "registry_pr": "https://github.com/ProgramBench/submissions/pull/27",
+      "rank": null,
+      "rank_claim_allowed": false
+    },
+    {
+      "id": "jarvi3-themis-g-aime-2026-supermath-dtl-public-seed",
+      "system": "Jarvi3: Themis-G",
+      "track": "dtl_verified",
+      "status": "public_seed_evidence",
+      "benchmark": "AIME-2026-style exact-answer set",
+      "total_cases": 30,
+      "correct": 14,
+      "incorrect": 0,
+      "abstain": 16,
+      "coverage_percent": 46.7,
+      "accuracy_overall_percent": 46.7,
+      "precision_on_answered_percent": 100.0,
+      "report": "evidence/aime-2026-supermath-dtl-full30.md",
+      "rank": null,
+      "rank_claim_allowed": false
+    }
+  ]
+}
