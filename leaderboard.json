@@ -5,6 +5,22 @@
   "updated": "2026-10-01",
   "entries": [
     {
+      "id": "dtl-mathgate-lite-2026-10-01",
+      "system": "DTL MathGate lite",
+      "track": "public_arithmetic_development_suite",
+      "status": "public_seed_evidence",
+      "total_cases": 240,
+      "exact_answers": 192,
+      "expected_refusals": 48,
+      "failed": 0,
+      "certificate_drift": 0,
+      "unit_tests_passed": 18,
+      "source_commit": "0884a4f06a65ae73816b1f8c166495aea56eb5d6",
+      "report": "evidence/mathgate-2026-10-01.json",
+      "rank": null,
+      "rank_claim_allowed": false
+    },
+    {
       "id": "jarvi3-themis-g-programbench-cleanroom-v2",
       "system": "Jarvi3: Themis-G",
       "track": "official_programbench_submission",

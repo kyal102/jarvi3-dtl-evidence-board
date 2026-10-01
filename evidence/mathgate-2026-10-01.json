@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-01",
+  "system": "DTL MathGate lite",
+  "repository": "https://github.com/kyal102/dtl-mathgate",
+  "tested_commit": "0884a4f06a65ae73816b1f8c166495aea56eb5d6",
+  "merged_commit": "a70db26031ba13ee4c66c105683a1d55f477042a",
+  "change": "https://github.com/kyal102/dtl-mathgate/pull/1",
+  "ci": "https://github.com/kyal102/dtl-mathgate/actions/runs/36838263606",
+  "evaluation_type": "public_development_suite",
+  "local_python": "3.11.9",
+  "unit_tests_passed": 18,
+  "benchmark_cases": 240,
+  "exact_answers": 192,
+  "expected_refusals": 48,
+  "benchmark_failures": 0,
+  "certificate_drift": 0,
+  "ci_passed_platforms": ["Ubuntu / Python 3.9", "Ubuntu / Python 3.12", "Windows / Python 3.9", "Windows / Python 3.12"],
+  "commands": ["python -m unittest discover -s tests", "python -m mathgate --bench"],
+  "scope": "The 240-case public corpus is unchanged. Additional regression tests cover discovered exponent-precedence, resource-size and nesting failures. The oracle is a separate implementation in the same repository, not an independent third-party evaluation.",
+  "official_rank": null
+}

@@ -15,6 +15,7 @@ local or public-seed results into official rankings.
 
 | Entry | Track | Result | Eligibility | Evidence |
 | --- | --- | ---: | --- | --- |
+| DTL MathGate lite | public arithmetic development suite | 192 exact answers + 48 expected refusals / 240; zero failures or certificate drift; 18 unit tests pass | Reproduced locally; Windows/Linux CI passed; no external ranking | [run record](evidence/mathgate-2026-10-01.json), [code and tests](https://github.com/kyal102/dtl-mathgate/pull/1) |
 | Jarvi3: Themis-G / ProgramBench cleanroom | official benchmark submission | 2/200 resolved; 1,037/1,037 recorded tests passed | Official registry PR pending | [public package](https://github.com/kyal102/jarvi3-themis-g-programbench-2solve), [PR #27](https://github.com/ProgramBench/submissions/pull/27) |
 | DTL/SuperMath / AIME-style public cases | problem-specific arithmetic replay | 14 correct, 0 incorrect, 16 abstain; 14/30 overall | Development evidence using case-specific code; not an unseen-problem reasoning score or an official MathArena ranking | [included report](evidence/aime-2026-supermath-dtl-full30.md) |
 
