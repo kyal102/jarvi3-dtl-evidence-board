@@ -1,0 +1,228 @@
+{
+  "title": "JARVI3 / EcoKure structured workflow reference demonstration",
+  "recorded_at": "2026-10-01T09:05:38.888633+00:00",
+  "source_file": "assurance_demo.py",
+  "source_sha256": "d964396a60605d5cc92497c2f432f63847029e7a825c54bfa619933d35cdec90",
+  "scope": "Five synthetic, developer-authored examples; three existing unit tests passed. This reference checks supplied evidence IDs and approval metadata, not the truth of source documents or authenticated reviewer identity. No customer or external benchmark result is claimed.",
+  "cases": {
+    "approved_traceable_draft": {
+      "schema": "ecokure-dtl.enterprise-assurance/v1",
+      "verification_state": "ALLOW",
+      "canonical_task": {
+        "schema": "ecokure-dtl.enterprise-assurance/v1",
+        "task_type": "client_deliverable_assurance",
+        "lane": "enterprise_assurance",
+        "intended_use": "draft_for_human_release",
+        "audience": "client",
+        "action_type": "draft_for_human_release",
+        "policy_version": "enterprise-assurance-policy-v1",
+        "evidence_state": {
+          "sources": [
+            {
+              "id": "source-001",
+              "title": "Approved source record",
+              "valid_until": "2099-12-31"
+            }
+          ]
+        },
+        "candidate_semantics": {
+          "recommendation": "Proceed to human review with the documented assumptions.",
+          "claims": [
+            {
+              "id": "claim-001",
+              "statement": "The documented assumption is supported.",
+              "evidence_ids": [
+                "source-001"
+              ]
+            }
+          ],
+          "human_approval": true
+        },
+        "input_state_sha256": "b4adf86c54cf3b91e8265c899156605d64416b690e55d97a9c08b1e964c6a4db"
+      },
+      "input_state_sha256": "b4adf86c54cf3b91e8265c899156605d64416b690e55d97a9c08b1e964c6a4db",
+      "canonical_result": {
+        "status": "ALLOW",
+        "accepted": true,
+        "lane": "enterprise_assurance",
+        "recommendation": "Proceed to human review with the documented assumptions.",
+        "reason_codes": []
+      },
+      "canonical_result_sha256": "3c4681aa547063d0c71596c5136fe0bca5f673bb682a97a4dae11c7683df9aa6",
+      "confidence_metadata": 0.99,
+      "replay_key": "1dcab268f58be9a780c91a4609efeb411188b14f31bf67a00febc3511d9141f9"
+    },
+    "missing_claim_evidence": {
+      "schema": "ecokure-dtl.enterprise-assurance/v1",
+      "verification_state": "BLOCK",
+      "canonical_task": {
+        "schema": "ecokure-dtl.enterprise-assurance/v1",
+        "task_type": "client_deliverable_assurance",
+        "lane": "enterprise_assurance",
+        "intended_use": "draft_for_human_release",
+        "audience": "client",
+        "action_type": "draft_for_human_release",
+        "policy_version": "enterprise-assurance-policy-v1",
+        "evidence_state": {
+          "sources": [
+            {
+              "id": "source-001",
+              "title": "Approved source record",
+              "valid_until": "2099-12-31"
+            }
+          ]
+        },
+        "candidate_semantics": {
+          "recommendation": "Proceed to human review with the documented assumptions.",
+          "claims": [
+            {
+              "id": "claim-001",
+              "statement": "The documented assumption is supported.",
+              "evidence_ids": [
+                "source-missing"
+              ]
+            }
+          ],
+          "human_approval": true
+        },
+        "input_state_sha256": "b3942428ac0cd8f0efa87ec9467540942e252ba378e94b37687dd6ee50b7af97"
+      },
+      "input_state_sha256": "b3942428ac0cd8f0efa87ec9467540942e252ba378e94b37687dd6ee50b7af97",
+      "canonical_result": {
+        "status": "BLOCK",
+        "accepted": false,
+        "lane": "enterprise_assurance",
+        "recommendation": "Proceed to human review with the documented assumptions.",
+        "reason_codes": [
+          "CLAIM_EVIDENCE_MISSING"
+        ]
+      },
+      "canonical_result_sha256": "56b9731d2561b1dd20953d41836a2a70274c0225700fcac8caaac3e6f7f387c7",
+      "confidence_metadata": 0.99,
+      "replay_key": "6da0fe776aba70f90c250c77c056d1d12ade3b201d0e0c366f6c740d16e9b7c5"
+    },
+    "human_approval_missing": {
+      "schema": "ecokure-dtl.enterprise-assurance/v1",
+      "verification_state": "ABSTAIN",
+      "canonical_task": {
+        "schema": "ecokure-dtl.enterprise-assurance/v1",
+        "task_type": "client_deliverable_assurance",
+        "lane": "enterprise_assurance",
+        "intended_use": "draft_for_human_release",
+        "audience": "client",
+        "action_type": "draft_for_human_release",
+        "policy_version": "enterprise-assurance-policy-v1",
+        "evidence_state": {
+          "sources": [
+            {
+              "id": "source-001",
+              "title": "Approved source record",
+              "valid_until": "2099-12-31"
+            }
+          ]
+        },
+        "candidate_semantics": {
+          "recommendation": "Proceed to human review with the documented assumptions.",
+          "claims": [
+            {
+              "id": "claim-001",
+              "statement": "The documented assumption is supported.",
+              "evidence_ids": [
+                "source-001"
+              ]
+            }
+          ],
+          "human_approval": false
+        },
+        "input_state_sha256": "a0b1bd853a3f9b78502713b228cf20c856d1283f87035d2ed4eb46d41fb601f7"
+      },
+      "input_state_sha256": "a0b1bd853a3f9b78502713b228cf20c856d1283f87035d2ed4eb46d41fb601f7",
+      "canonical_result": {
+        "status": "ABSTAIN",
+        "accepted": false,
+        "lane": "enterprise_assurance",
+        "recommendation": "Proceed to human review with the documented assumptions.",
+        "reason_codes": [
+          "HUMAN_APPROVAL_REQUIRED"
+        ]
+      },
+      "canonical_result_sha256": "98a4621d0b8e7d4d3b8684ee9be5230b504bef8deebf2fe5b1535c753407de58",
+      "confidence_metadata": 0.99,
+      "replay_key": "bad935c9ce4c7362ae7fac9f5bcbf9e23ecdfa35a4e05dbec0093e958032428f"
+    },
+    "external_commitment_blocked": {
+      "schema": "ecokure-dtl.enterprise-assurance/v1",
+      "verification_state": "BLOCK",
+      "canonical_task": {
+        "schema": "ecokure-dtl.enterprise-assurance/v1",
+        "task_type": "client_deliverable_assurance",
+        "lane": "enterprise_assurance",
+        "intended_use": "draft_for_human_release",
+        "audience": "client",
+        "action_type": "external_commitment",
+        "policy_version": "enterprise-assurance-policy-v1",
+        "evidence_state": {
+          "sources": [
+            {
+              "id": "source-001",
+              "title": "Approved source record",
+              "valid_until": "2099-12-31"
+            }
+          ]
+        },
+        "candidate_semantics": {
+          "recommendation": "Proceed to human review with the documented assumptions.",
+          "claims": [
+            {
+              "id": "claim-001",
+              "statement": "The documented assumption is supported.",
+              "evidence_ids": [
+                "source-001"
+              ]
+            }
+          ],
+          "human_approval": true
+        },
+        "input_state_sha256": "b7c5d9aa9d341b10af5e4cd8a424010fb8f65d51b85e2c7bccc334858d066e26"
+      },
+      "input_state_sha256": "b7c5d9aa9d341b10af5e4cd8a424010fb8f65d51b85e2c7bccc334858d066e26",
+      "canonical_result": {
+        "status": "BLOCK",
+        "accepted": false,
+        "lane": "enterprise_assurance",
+        "recommendation": "Proceed to human review with the documented assumptions.",
+        "reason_codes": [
+          "AUTONOMOUS_ACTION_NOT_PERMITTED"
+        ]
+      },
+      "canonical_result_sha256": "8abf2f51987735397918bd4509d7518e970f946c4b6c7e861518a4ebb195a73d",
+      "confidence_metadata": 0.99,
+      "replay_key": "6df91dd49fdc04857bc3e013b76c5f072b07ec1af86612a3644850ea02cf90c6"
+    },
+    "candidate_disagreement": {
+      "schema": "ecokure-dtl.enterprise-assurance/v1",
+      "verification_state": "ABSTAIN",
+      "reason_codes": [
+        "CANDIDATE_DISAGREEMENT"
+      ],
+      "candidate_results": [
+        {
+          "status": "ALLOW",
+          "accepted": true,
+          "lane": "enterprise_assurance",
+          "recommendation": "Proceed to human review with the documented assumptions.",
+          "reason_codes": []
+        },
+        {
+          "status": "ALLOW",
+          "accepted": true,
+          "lane": "enterprise_assurance",
+          "recommendation": "Reject the proposal and escalate for review.",
+          "reason_codes": []
+        }
+      ],
+      "input_state_sha256": "b4adf86c54cf3b91e8265c899156605d64416b690e55d97a9c08b1e964c6a4db",
+      "replay_key": "5f21a8c7578a079598ae36b028af31e96bd5b74cd9d127f2e54f5cf974970d57"
+    }
+  }
+}

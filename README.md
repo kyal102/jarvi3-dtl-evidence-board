@@ -5,7 +5,7 @@ Inspect a check. Run it yourself. Keep the receipt.
 JARVI3 and the EcoKure E-stack connect supported verification tools, evidence
 records and replay. Start with the [E-stack overview and public quickstart](E-STACK.md),
 try [JARVI3](https://jarvi3.com), or discuss a bounded evaluation through
-[EcoKure](https://ecokure.com).
+[four-week pilot](https://kyal102.github.io/jarvi3-dtl-evidence-board/pilot.html).
 
 This is the public evidence board for the Deterministic Taxonomy Lanes (DTL)
 method. It is not the official ProgramBench leaderboard and it does not turn

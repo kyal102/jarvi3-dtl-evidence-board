@@ -8,8 +8,10 @@ DTL results are reported as a tuple, not as one blended score:
 - replay and certificate status;
 - contamination and holdout status.
 
-For software tasks, a solve requires a clean sealed archive and a complete
-passing eval record. For exact-answer tasks, an answer is promoted only when a
+For software tasks, a reproducible candidate score requires a pinned archive
+and a complete passing eval record. Archive hashes establish byte identity;
+generation provenance and benchmark eligibility require separate evidence.
+For exact-answer tasks, an answer is promoted only when a
 deterministic lane emits a certificate; otherwise the system abstains.
 
 Public-seed and development runs are evidence of behavior, not leaderboard
@@ -27,3 +29,10 @@ Public package tests measure the specific cases exercised by that package.
 Passing a suite does not certify the full E-stack, exclude other defects, or
 establish superiority to a language model. External ranking requires acceptance
 under the external benchmark's current rules.
+
+On 1 October 2026, the two pinned ProgramBench candidate archives were evaluated
+with unmodified official ProgramBench 1.2.5, then compared using its official
+score-comparison functions. Both scores reproduced: 1,346 raw passes and 1,037
+passes after official filtering. This was a submitter-side reproduction, not
+maintainer verification or a new generation run. The original generation
+provenance remains unresolved. See the dated JSON reproduction record.

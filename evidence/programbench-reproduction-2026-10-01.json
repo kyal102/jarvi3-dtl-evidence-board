@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "record_type": "local_reproduction_of_published_programbench_candidates",
+  "date": "2026-10-01",
+  "submission": {
+    "repository": "https://github.com/kyal102/jarvi3-themis-g-programbench-2solve",
+    "commit": "c1240b5175426d9d401a63d3b5a56224ed44d409",
+    "submission_id": "20260824_dtl-supermath-2solve-cleanroom-v2",
+    "registry_pull_request": "https://github.com/ProgramBench/submissions/pull/27"
+  },
+  "evaluator": {
+    "repository": "https://github.com/facebookresearch/ProgramBench",
+    "version": "1.2.5",
+    "commit": "27f02157c785f8da3647aa6dbbe6b9137f99f10e",
+    "official_evaluator_logic_modified": false,
+    "image_tag": "task_cleanroom_v6",
+    "workers": 1,
+    "branch_workers": 1,
+    "docker_cpus_per_container": 10,
+    "branch_retries": 1
+  },
+  "method": {
+    "level": "Tier-1-equivalent official re-evaluation and score comparison",
+    "literal_submit_verify_tier1_command_executed": false,
+    "description": "Ran the unmodified official programbench eval command with a separate persistent output directory. Compared the resulting per-instance scores with the pinned submission using official programbench.submission.score_run and programbench.verify._close, the same score comparison used by verify_tier1. Raw outputs were retained instead of using the temporary directory discarded by submit verify --tier1.",
+    "command_template": "programbench eval <pinned-submission-checkout> --output <separate-results-directory> --workers 1",
+    "score_tolerance": 1e-06,
+    "additional_check": "Compared official filtered per-test maps from programbench.submission.test_results_map; zero changed outcomes for either instance.",
+    "generation_or_inference_rerun": false
+  },
+  "runtime": {
+    "orchestrator": "Ubuntu 24.04 on WSL 2",
+    "architecture": "x86_64",
+    "python_version": "3.12.3",
+    "docker_server_version": "29.1.3",
+    "locale_setting": {
+      "PYTHONUTF8": "1"
+    }
+  },
+  "timing": {
+    "started_utc": "2026-10-01T09:00:09.749480+00:00",
+    "ended_utc": "2026-10-01T09:04:58.682122+00:00",
+    "elapsed_seconds_including_comparison": 288.933,
+    "scope": "Successful Linux invocation and score comparison only; excludes earlier image downloads, installation, and infrastructure-blocked attempts."
+  },
+  "results": [
+    {
+      "instance_id": "abishekvashok__cmatrix.5c082c6",
+      "archive_sha256": "2f410bc1a971e298869ca0ca7f3de1a5ab5c5b9e32d9ba81b3ba247d08e5a24c",
+      "official_image": "programbench/abishekvashok_1776_cmatrix.5c082c6:task_cleanroom_v6",
+      "official_image_digest": "sha256:e6c6758f3d63102bd19d779c091201b823a257e6abf015b623022b2bf72dd298",
+      "runtime_image_id": "sha256:e6c6758f3d63102bd19d779c091201b823a257e6abf015b623022b2bf72dd298",
+      "raw_tests_passed": 769,
+      "raw_tests_total": 769,
+      "filtered_tests_passed": 506,
+      "filtered_tests_total": 506,
+      "reported_score": 1.0,
+      "reproduced_score": 1.0,
+      "official_score_comparison_passed": true,
+      "changed_filtered_test_outcomes": 0,
+      "error_code": null,
+      "branch_errors": {},
+      "warnings": []
+    },
+    {
+      "instance_id": "ajeetdsouza__zoxide.67ca1bc",
+      "archive_sha256": "01f32bfbc770b4e9efc76d02a39947b734baebf12203085f7d90183c8beecffd",
+      "official_image": "programbench/ajeetdsouza_1776_zoxide.67ca1bc:task_cleanroom_v6",
+      "official_image_digest": "sha256:bf96ba8d6127593a600461ad755576693ef8704cbbf7bbefe1147bd66e62c76c",
+      "runtime_image_id": "sha256:bf96ba8d6127593a600461ad755576693ef8704cbbf7bbefe1147bd66e62c76c",
+      "raw_tests_passed": 577,
+      "raw_tests_total": 577,
+      "filtered_tests_passed": 531,
+      "filtered_tests_total": 531,
+      "reported_score": 1.0,
+      "reproduced_score": 1.0,
+      "official_score_comparison_passed": true,
+      "changed_filtered_test_outcomes": 0,
+      "error_code": null,
+      "branch_errors": {},
+      "warnings": []
+    }
+  ],
+  "totals": {
+    "instances_reproduced": 2,
+    "raw_tests_passed": 1346,
+    "raw_tests_total": 1346,
+    "official_filtered_tests_passed": 1037,
+    "official_filtered_tests_total": 1037,
+    "changed_filtered_test_outcomes": 0,
+    "official_score_comparison_passed": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  "integrity": {
+    "candidate_archive_bytes_unchanged": true,
+    "official_image_ids_identical_after_local_daemon_transfer": true,
+    "key_installed_evaluator_sources_match_official_checkout": true,
+    "git_line_ending_note": "Windows Git reported both checkouts clean. Linux Git reported Windows-checkout CRLF line-ending differences; git diff --ignore-space-at-eol --exit-code returned 0 for both repositories. Original observed dirty flags remain in the private run manifest. No evaluator logic or candidate archive was changed.",
+    "installed_source_hash_basis": "SHA-256 of the CRLF working-copy source files and matching installed files; not canonical Git blob hashes.",
+    "installed_source_sha256": {
+      "verify.py": "5d969938a54bc56c084c7900ea984634f287948bf77db9f22f960a3f4323d4e8",
+      "container.py": "0c0b1cc60dea9c02e2b4faf0233ec5a85d25ac90bfc7b72d70cdad7aa8ae6232",
+      "eval/eval.py": "94cd7951a53ed9e365103caded097ab8d26b62a74ef087ab5f73080aa342d00e",
+      "eval/eval_batch.py": "d2e386457f6d89a1e506db44bee706f39ae5f376d15106158c147620dd5bfeb7",
+      "submission.py": "638ade939a66c74b7acb6ed0daa3fdd0610f43bdbceb094c4fec191b3caa5da1"
+    }
+  },
+  "scope_limits": {
+    "generation_provenance": "unresolved",
+    "taxonomy_generation_validated": false,
+    "explanation": "This record establishes local reproducibility of the two stored candidates under the specified official evaluator. It does not establish their generation provenance, cleanroom inference compliance, benchmark acceptance, ranking, or broader model capability.",
+    "evaluation_operator": "Local submitter-side reproduction using the official evaluator; not maintainer verification or an external certification."
+  }
+}

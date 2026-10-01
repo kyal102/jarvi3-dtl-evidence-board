@@ -56,6 +56,6 @@ latency, and what changes when evidence or policy changes. Keep hidden test case
 separate from development examples. The [evidence board](README.md) distinguishes
 public demonstrations from accepted external benchmark entries.
 
-Explore [JARVI3](https://jarvi3.com) or [EcoKure](https://ecokure.com) for product
+Explore [JARVI3](https://jarvi3.com) or [a bounded pilot](https://kyal102.github.io/jarvi3-dtl-evidence-board/pilot.html) for product
 access and enterprise evaluation enquiries. Technical reproduction questions
 belong in the relevant public tool's issue tracker.
