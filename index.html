@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JARVI3 DTL Evidence Board</title>
+  <title>JARVI3 / EcoKure — public tools and evidence</title>
+  <meta name="description" content="Explore JARVI3 and the EcoKure E-stack: runnable verification tools, evidence receipts, replay and transparent benchmark status.">
   <style>
     :root { color-scheme: light; --ink: #17212b; --muted: #5b6875; --line: #d8e0e7; --accent: #0b6e69; --soft: #eef7f5; }
     body { margin: 0; font: 16px/1.55 system-ui, sans-serif; color: var(--ink); background: #f7f9fb; }
@@ -18,15 +19,29 @@
     .status { display: inline-block; padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; font-size: .85rem; white-space: nowrap; }
     a { color: var(--accent); }
     .metric { font-weight: 700; white-space: nowrap; }
+    .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin: 28px 0; }
+    .tool { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+    .tool h2 { font-size: 1.1rem; margin-top: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+    .actions a { padding: 10px 16px; border: 1px solid var(--accent); border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .actions a:first-child { background: var(--accent); color: white; }
     footer { color: var(--muted); margin-top: 28px; font-size: .9rem; }
     @media (max-width: 760px) { main { padding: 32px 14px 48px; } table, thead, tbody, tr, th, td { display: block; } thead { display: none; } td { border-bottom: 0; padding: 8px 14px; } tr { border-bottom: 1px solid var(--line); padding: 12px 0; } td:first-child { padding-top: 16px; } td:last-child { padding-bottom: 16px; } }
   </style>
 </head>
 <body>
   <main>
-    <h1>JARVI3 DTL Evidence Board</h1>
-    <p class="lede">A public record of deterministic taxonomy lane results. DTL promotes certificate-backed answers, abstains when evidence is insufficient, and keeps benchmark eligibility separate from development evidence.</p>
-    <div class="notice"><strong>Claim boundary:</strong> this is not the official ProgramBench or MathArena leaderboard. The ProgramBench entry is awaiting registry review.</div>
+    <p>JARVI3 / ECOKURE</p>
+    <h1>Inspect the check.<br>Keep the evidence.</h1>
+    <p class="lede">Explore the public tools behind an approach to AI verification: scoped checks, explicit unsupported outcomes, evidence receipts and replay. Run a small example, inspect its limits, then evaluate it in your workflow.</p>
+    <nav class="actions" aria-label="Explore JARVI3"><a href="https://jarvi3.com">Try JARVI3</a><a href="https://github.com/kyal102/jarvi3-dtl-evidence-board/blob/main/E-STACK.md">Understand the E-stack</a><a href="https://ecokure.com">Discuss an evaluation</a></nav>
+    <section class="tools" aria-label="Public tools">
+      <article class="tool"><h2>Route → check → receipt</h2><p>ClaimStack demonstrates dimensional checks, explicit refusals and sealed records using Python's standard library.</p><a href="https://github.com/kyal102/claimstack-demo">Run ClaimStack →</a></article>
+      <article class="tool"><h2>Exact arithmetic</h2><p>DTL MathGate evaluates supported arithmetic with exact values. Its public corpus and regression tests expose the implemented scope.</p><a href="https://github.com/kyal102/dtl-mathgate">Inspect MathGate →</a></article>
+      <article class="tool"><h2>Replay and inspect drift</h2><p>ReplayGate replays supported evidence packs and compares results. Inspect the implementation and its execution limits.</p><a href="https://github.com/kyal102/replaygate">Explore ReplayGate →</a></article>
+    </section>
+    <h2>Public evidence record</h2>
+    <div class="notice">This page records development evidence and submission status. It is not an external leaderboard. ProgramBench PR #27 remains open as of 1 October 2026.</div>
     <table>
       <thead><tr><th>Entry</th><th>Track</th><th>Result</th><th>Status</th><th>Evidence</th></tr></thead>
       <tbody>
@@ -39,14 +54,15 @@
         </tr>
         <tr>
           <td><strong>DTL/SuperMath</strong><br>AIME-style public seed</td>
-          <td>Verifier-first exact-answer lane</td>
-          <td class="metric">14 correct<br>0 incorrect<br>16 abstain<br>100% precision on answered</td>
-          <td><span class="status">Public-seed evidence</span></td>
+          <td>Case-specific arithmetic replay</td>
+          <td class="metric">14/30 correct overall<br>0 incorrect<br>16 abstain</td>
+          <td><span class="status">Development evidence</span><p>Known case IDs and problem-specific calculations; not an unseen-problem reasoning score.</p></td>
           <td><a href="evidence/aime-2026-supermath-dtl-full30.md">Full report</a></td>
         </tr>
       </tbody>
     </table>
-    <footer>Machine-readable source: <a href="leaderboard.json">leaderboard.json</a>. Methodology: <a href="METHODOLOGY.md">METHODOLOGY.md</a>.</footer>
+    <p class="lede">The public lite tools implement bounded checks. Passing a check does not establish general scientific truth, production readiness, or validation of every E-stack layer.</p>
+    <footer>Machine-readable source: <a href="leaderboard.json">leaderboard.json</a>. <a href="https://github.com/kyal102/jarvi3-dtl-evidence-board/blob/main/METHODOLOGY.md">Methodology</a>. <a href="https://github.com/kyal102/jarvi3-dtl-evidence-board">Source and feedback</a>.</footer>
   </main>
 </body>
 </html>

@@ -1,4 +1,11 @@
-# JARVI3 DTL Evidence Board
+# JARVI3 / EcoKure — public tools and evidence
+
+Inspect a check. Run it yourself. Keep the receipt.
+
+JARVI3 and the EcoKure E-stack connect supported verification tools, evidence
+records and replay. Start with the [E-stack overview and public quickstart](E-STACK.md),
+try [JARVI3](https://jarvi3.com), or discuss a bounded evaluation through
+[EcoKure](https://ecokure.com).
 
 This is the public evidence board for the Deterministic Taxonomy Lanes (DTL)
 method. It is not the official ProgramBench leaderboard and it does not turn
@@ -9,12 +16,14 @@ local or public-seed results into official rankings.
 | Entry | Track | Result | Eligibility | Evidence |
 | --- | --- | ---: | --- | --- |
 | Jarvi3: Themis-G / ProgramBench cleanroom | official benchmark submission | 2/200 resolved; 1,037/1,037 recorded tests passed | Official registry PR pending | [public package](https://github.com/kyal102/jarvi3-themis-g-programbench-2solve), [PR #27](https://github.com/ProgramBench/submissions/pull/27) |
-| DTL/SuperMath / AIME-style public seed | verifier-first exact-answer lane | 14 correct, 0 incorrect, 16 abstain; 100% precision on answered cases | Public-seed evidence; not an official MathArena ranking | [included report](evidence/aime-2026-supermath-dtl-full30.md) |
+| DTL/SuperMath / AIME-style public cases | problem-specific arithmetic replay | 14 correct, 0 incorrect, 16 abstain; 14/30 overall | Development evidence using case-specific code; not an unseen-problem reasoning score or an official MathArena ranking | [included report](evidence/aime-2026-supermath-dtl-full30.md) |
 
-The board's strongest claim is selective reliability: DTL promotes only
-answers with a deterministic certificate and abstains when the lane cannot
-justify an answer. Coverage and precision are reported separately so abstention
-cannot be mistaken for a solved case.
+Coverage, correctness and refusals are reported separately. The AIME wrapper
+routes by known case identifiers to problem-specific calculations; its 100%
+precision on answered examples does not measure generalization to unseen math
+problems. A certificate records the declared computation, not benchmark eligibility.
+
+Last registry status check: 1 October 2026. ProgramBench PR #27 remains open.
 
 ## Eligibility
 

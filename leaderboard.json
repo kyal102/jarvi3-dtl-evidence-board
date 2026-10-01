@@ -2,7 +2,7 @@
   "schema_version": 1,
   "board": "JARVI3 DTL Evidence Board",
   "claim_boundary": "Public evidence board; not an official ProgramBench or MathArena leaderboard.",
-  "updated": "2026-08-24",
+  "updated": "2026-10-01",
   "entries": [
     {
       "id": "jarvi3-themis-g-programbench-cleanroom-v2",
@@ -24,7 +24,7 @@
     {
       "id": "jarvi3-themis-g-aime-2026-supermath-dtl-public-seed",
       "system": "Jarvi3: Themis-G",
-      "track": "dtl_verified",
+      "track": "case_specific_arithmetic_replay",
       "status": "public_seed_evidence",
       "benchmark": "AIME-2026-style exact-answer set",
       "total_cases": 30,
@@ -34,6 +34,8 @@
       "coverage_percent": 46.7,
       "accuracy_overall_percent": 46.7,
       "precision_on_answered_percent": 100.0,
+      "generalization_evidence": false,
+      "claim_boundary": "Known case identifiers route to problem-specific calculations. This measures public development-case arithmetic replay, not unseen-problem reasoning.",
       "report": "evidence/aime-2026-supermath-dtl-full30.md",
       "rank": null,
       "rank_claim_allowed": false
